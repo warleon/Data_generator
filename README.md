@@ -11,7 +11,7 @@ pip3 install pandas
 ~~~
 
 ## Como usarlo
-1. En "dataGen.py" modifica las 2 variables 'eBase' con el nombre de tu "archivo.csv" y 'eGen' con el nombre del "gen.csv" que quieras obtener.Ambos nombres de archivo tienen que tener la terminacion .csv debido a las funciones de pandas que se estan usando.
+1. En "dataGen.py" modifica las 2 variables 'eBase' con el nombre de tu "archivo.csv" y 'eGen' con el nombre del "gen.csv" que quieras obtener. Ambos nombres de archivo tienen que tener la terminacion .csv debido a las funciones de pandas que se estan usando.
 
 2. En tu terminal ejecuta el comando:
 ~~~
