@@ -1,9 +1,12 @@
 import pandas as pd
 import random as rd
 
-n=140
+n=140 #numero de lineas a generar
 
-eBase="Encuesta.csv" #la encuesta que ya tengas
+eBase=".csv" #nombre la encuesta que ya tengas
+eGen=".csv" #nombre de la encuesta generada  
+#tienen que ser .csv
+
 
 #extrayendo las variables de la encuesta
 DF = pd.read_csv(eBase)
@@ -27,5 +30,5 @@ for x in range(n):
 #convirtieno el diccionario a un dataframe y guardandolo en un archivo.csv
 d=pd.DataFrame.from_dict(d)
 
-d.to_csv("experiment.csv",sep=";")
+d.to_csv(eGen,sep=";")
 ###
