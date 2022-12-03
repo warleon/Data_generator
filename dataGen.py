@@ -3,15 +3,19 @@ import random as rd
 import numpy as np
 
 n=212 #numero de lineas a generar
-ignorefirst=3
+ignorefirst=2 #ignora correo y fecha
 
-eBase="Encuesta_modificada.csv" #nombre la encuesta que ya tengas
+eBase="pi3.csv" #nombre la encuesta que ya tengas
 eGen="nueva_data.csv" #nombre de la encuesta generada
 #tienen que ser .csv
 
 
 #extrayendo las variables de la encuesta
 DF = pd.read_csv(eBase)
+DF.dropna(
+    axis=0,
+    inplace=True
+)
 nombres=DF.columns
 ###
 
@@ -72,5 +76,5 @@ for x in range(n):#cantidad de filas generadas
 ##convirtieno el diccionario a un dataframe y guardandolo en un archivo.csv
 d=pd.DataFrame.from_dict(d)
 
-d.to_csv(eGen,sep=";")
+d.to_csv(eGen,sep=",", index=False)
 ###
